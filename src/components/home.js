@@ -20,6 +20,7 @@ export const Home = () => {
   const [user_room, setuser_room] = useState(0);
   const [user_photourl, setuser_photourl] = useState(0);
   const [sroom,setsroom]=useState()
+  // const [sroom,setsroom]=useState("")
   const [sfloor,setfloor]=useState("Ground")
   const [sname,setsname]=useState()
   const [roombook_alert,setroombook_alert]=useState("displaynone")
@@ -101,7 +102,8 @@ for(let i=0;i<json.length;i++){
 
   const handle=async (e)=>{
    
-    let roomno={sroom}
+    // let roomno={sroom}
+    let roomno = sroom; // Ensure roomno is the room number, not an object
     e.preventDefault();
     const response=await fetch(`http://${state.backend}:${state.port}/api/b/bookroom`,{
         method:'POST',

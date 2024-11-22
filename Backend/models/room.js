@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 // import mongoose from 'mongoose';
+
 const { Schema } = mongoose;
 
 const RoomSchema = new Schema({
@@ -22,3 +23,5 @@ const RoomSchema = new Schema({
 });
 mongoose.pluralize(null);
 module.exports = mongoose.models.room || mongoose.model('room', RoomSchema);
+
+
